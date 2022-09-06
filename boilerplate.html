@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="jumbotron text-right">
+           <div class="container"><div class="row">
+        <div class="col-sm-4"><div id="mapid"  style="width: 600px; height: 400px;"></div></div>
+
+      </div>
+    </div>
+  </div>
+
+ <script>
+
+ 	var mymap = L.map('mapid').setView([29.425718, -98.489589], 13);
+
+  L.tileLayer('TOKEN GOES HERE', {
+  maxZoom: 18,
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+    '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  id: 'mapbox.streets'
+}).addTo(mymap);
+
+var marker = L.marker([29.425718, -98.489589]).addTo(mymap);
+
+
+ </script>
+ <div class="container">
+   <div class="row">
+     <div class="col-sm-4">
+       <h3>Column 1</h3>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+     </div>
+     <div class="col-sm-4">
+       <h3>Column 2</h3>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+     </div>
+     <div class="col-sm-4">
+       <h3>Column 3</h3>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+     </div>
+   </div>
+ </div>
+<p></p>
+</body>
+</html>
